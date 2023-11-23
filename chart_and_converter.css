@@ -3,13 +3,15 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background: rgb(18, 18, 114);
-    padding: 2rem 9%;
+    background: rgb(19, 116, 0);
+    background: linear-gradient(90deg, rgba(2, 66, 7, 0.914) 0%, rgb(0, 165, 41) 50%, rgba(1, 138, 31, 0.863) 100%);
+    padding: 2.4rem 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    height: 13vh;
+    z-index: 1000;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.1);
+    height: 12vh;
 }
 
 header .logo {
@@ -21,20 +23,42 @@ header .logo {
     color: white;
     font-weight: bolder;
 }
-header .navbar .nav-link {
-    margin-left: auto;
+
+header .logo {
+    font-size: 5rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bolder;
+}
+
+header .navbar {
+    overflow: hidden;
+}
+
+header .navbar a {
+    float: left;
+    display: block;
     text-align: center;
     font-size: 1.5rem;
-    padding: 0 1.7rem;
+    padding: 0 2rem;
     text-decoration: none;
-    margin-top: 10px;
-    padding-right: 1px;
-    color: rgb(83, 83, 83);
-    color: white;
+    color: #fff;
 }
-.convert , .reset{
-    /* background-color: rgba(64, 145, 108) */
+
+header .navbar a:hover {
+    color: #000000;
+    opacity: 0.4;
 }
+
+.header  {
+    font-size: 3.5rem;
+    color: #fff;
+    border-radius: .3rem;
+    /* padding: .3rem .7rem; */
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+}
+
 
 header .navbar a:hover {
     color: rgb(161, 161, 185);
@@ -59,7 +83,6 @@ header .navbar a:hover {
   color: black;
   padding: 5%;
 }
-
 
 .right{
     display: flex;
@@ -155,3 +178,4 @@ header .navbar a:hover {
     background-color: rgb(64, 145, 108);
     padding: auto;
 }
+
