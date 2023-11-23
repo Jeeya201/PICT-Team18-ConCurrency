@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #f4f4f8;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(19, 116, 0);
+background: linear-gradient(90deg, rgba(2, 66, 7, 0.914) 0%, rgb(0, 165, 41) 50%, rgba(1, 138, 31, 0.863) 100%);
+    padding: 2.4rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 5rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bolder;
+}
+
+header .navbar {
+    overflow: hidden;
+}
+
+header .navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    font-size: 2.6rem;
+    padding: 0 2rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+header .navbar a:hover {
+    color: #000000;
+    opacity: 0.4;
+}
+
+.header .fa-bars {
+    font-size: 3.5rem;
+    color: #fff;
+    border-radius: .3rem;
+    padding: .3rem .7rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+}
+
+/* Currency Container Styles */
+.currency-info{
+    margin-top: 140px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    justify-content: space-around;
+    color: #121272;
+    font-size: 3.5rem
+}
+
+.currency-info p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    justify-content: space-around;
+    color: #121272;
+    font-size: 1.5rem
+}
+
+.currency-container {
+    margin: 10px 20px 70px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    font-size: xx-large;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.currency {
+    margin: 10px;
+    text-align: center;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    flex: 1 0 24%; 
+}
+
+.currency:hover {
+    transform: translateY(-5px);
+}
+
+.currency .Currency-name {
+    margin: 0;
+    color: #121272;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.currency .Currency-Desc{
+    margin: 0;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.currency .excg-rate{
+    margin: 0;
+    color: #005c08;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.currency span{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+}
+
+.currency img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 1200px) {
+    .currency {
+        flex: 1 0 48%; /* Each currency takes 48% of the container on screens up to 1200px wide */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .currency {
+        flex: 1 0 100%; /* Each currency takes 100% of the container on screens up to 768px wide */
+    }
+}
+
+/* Table Styles */
+#root {
+    margin: 10px 20px 70px;
+    margin-top: 50px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#mytable {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: #fff;
+}
+
+#mytable td,
+#mytable th {
+    text-align: center;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+#mytable td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+#mytable thead th {
+    color: #fff;
+    background: #0a0a24;
+}
+
+#mytable thead th:nth-child(odd) {
+    color: #fff;
+    background: #0a0a24;
+}
+
+#mytable tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+/* About Us Styles */
+
+.heading {
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    margin: 2rem 0;
+    background: #0a0a24;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Footer Styles */
+.footer {
+    background: rgb(19, 116, 0);
+    background: linear-gradient(90deg, rgba(2, 66, 7, 0.914) 0%, rgb(0, 165, 41) 50%, rgba(1, 138, 31, 0.863) 100%);
+        color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.footer .credit {
+    font-size: 2.4rem;
+    color: #ffffff;
+}
+
+.footer .credit span {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
