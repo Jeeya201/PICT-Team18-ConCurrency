@@ -1,0 +1,26 @@
+                                                                                #Optional Task 4
+Problem statement : UI screen to display all currencies along with the short code, description, and current exchange rate
+
+## UI Screen
+
+### Currency Information Section
+
+The main section of the page is dedicated to displaying currency information. Each currency is presented in a card format with the following details:
+- **Logo**: An image representing the currency.
+- **Short Code**: A short code representing the currency (e.g., USD, EUR).
+- **Description**: A brief description providing information about the currency.
+- **Current Exchange Rate**: The current exchange rate with respect to USD.
+
+### Responsive Design
+
+The application is designed to be responsive, ensuring an optimal viewing experience on various devices, including desktops, tablets, and mobile phones.
+
+## Technologies Used
+
+- **HTML**: Structure of the web page.
+- **CSS**: Styling for an aesthetically pleasing design.
+- **JavaScript**: Dynamic content generation and API integration.
+
+## Completion
+
+The UI screen for displaying all currencies, along with short codes, descriptions, and current exchange rates, has been successfully implemented.

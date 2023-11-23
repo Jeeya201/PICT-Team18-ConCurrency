@@ -1,0 +1,44 @@
+                                                                                        # Optional Task 3
+
+Problem Statement : Provide a Service/Component to convert value of currency into another currency. For instance, if the user provides base currency as USD and target currency as INR and amount
+of 1000 and let’s say exchange rate is 79, component should convert amount into target currency and result should be 79,000 INR
+
+
+Currency Converter
+This simple currency converter allows users to convert between different currencies using real-time exchange rates. The application utilizes the ExchangeRate-API to fetch the latest exchange rates. Here's a brief overview of the code:
+
+Key Components:
+API Endpoint:
+
+The application fetches exchange rates from the ExchangeRate-API using the endpoint: https://api.exchangerate-api.com/v4/latest/USD.
+User Interface Elements:
+
+Various HTML elements are selected using JavaScript, such as search box, conversion button, source currency dropdown, target currency dropdown, and display elements.
+Event Listeners:
+
+Event listeners are set up to capture changes in the selected source and target currencies.
+Input Handling:
+
+The application updates the search value as the user types in the search box.
+Conversion Trigger:
+
+Clicking the "Convert" button triggers the getResults function.
+Fetching Exchange Rates:
+
+The getResults function fetches the latest exchange rates from the API.
+Displaying Results:
+
+The displayResults function calculates and displays the converted amount based on the selected source and target currencies and the entered value.
+Resetting Values:
+The clearVal function reloads the page and clears the displayed results.
+
+How to Use:
+
+Select source and target currencies from the dropdowns.
+Enter the amount you want to convert.
+Click the "Convert" button to see the converted amount.
+Use the "Reset" button to clear the input and start over.
+
+Notes:
+Exchange rates are fetched in real-time from the ExchangeRate-API.
+Results are displayed with two decimal places for clarity.
