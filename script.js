@@ -1,38 +1,39 @@
 // include api for currency change
 const api = "https://api.exchangerate-api.com/v4/latest/USD";
 
-// for selecting different controls
+// Variables for different
 var search = document.querySelector(".searchBox");
-var convert = document.querySelector(".convert");
-var fromCurrecy = document.querySelector(".from");
-var toCurrecy = document.querySelector(".to");
-var finalValue = document.querySelector(".finalValue");
-var finalAmount = document.getElementById("finalAmount");
 var resultFrom;
+var toCurrecy = document.querySelector(".to");
+var fromCurrecy = document.querySelector(".from");
 var resultTo;
 var searchValue;
+var finalAmount = document.getElementById("finalAmount");
+var finalValue = document.querySelector(".finalValue");
+var convert = document.querySelector(".convert");
 
-// Event when currency is changed
-fromCurrecy.addEventListener("change", (event) => {
-  resultFrom = `${event.target.value}`;
-});
-
-// Event when currency is changed
+// changed in currency
 toCurrecy.addEventListener("change", (event) => {
   resultTo = `${event.target.value}`;
 });
 
+// change in currency
+fromCurrecy.addEventListener("change", (event) => {
+  resultFrom = `${event.target.value}`;
+});
+
+
 search.addEventListener("input", updateValue);
 
-// function for updating value
+// Updation of value
 function updateValue(e) {
   searchValue = e.target.value;
 }
 
-// when user clicks, it calls function getresults
+// function getResult called
 convert.addEventListener("click", getResults);
 
-// function getresults
+// get result
 function getResults() {
   fetch(`${api}`)
     .then((currency) => {
@@ -41,7 +42,14 @@ function getResults() {
     .then(displayResults);
 }
 
-// display results after conversion
+// Reset button clicked
+function clearVal() {
+  window.location.reload();
+  document.getElementsByClassName("finalValue").innerHTML = "";
+}
+
+
+// Display results
 function displayResults(currency) {
   let fromRate = currency.rates[resultFrom];
   let toRate = currency.rates[resultTo];
@@ -49,8 +57,3 @@ function displayResults(currency) {
   finalAmount.style.display = "block";
 }
 
-// when user click on reset button
-function clearVal() {
-  window.location.reload();
-  document.getElementsByClassName("finalValue").innerHTML = "";
-}
