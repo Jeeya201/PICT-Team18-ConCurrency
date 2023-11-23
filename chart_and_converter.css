@@ -50,7 +50,7 @@ header .navbar a:hover {
     opacity: 0.4;
 }
 
-.header  {
+.header  a {
     font-size: 3.5rem;
     color: #fff;
     border-radius: .3rem;
