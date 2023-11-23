@@ -45,12 +45,13 @@ Conveniently convert currencies in real-time using our built-in converter. The c
 Visualize currency exchange rate trends over time using Chart.js. The interactive charts provide insights into currency performance, empowering users to make informed decisions.
 
 ## Screenshots
+![WhatsApp Image 2023-11-23 at 10 47 02 AM](https://github.com/Jeeya201/PICT-Team18-ConCurrency/assets/104685075/e9022aaa-6d16-46a6-9821-d7353767a4b3)
+![WhatsApp Image 2023-11-23 at 10 46 26 AM](https://github.com/Jeeya201/PICT-Team18-ConCurrency/assets/104685075/e056303c-2ba2-428f-bd98-cd7433763af2)
+![WhatsApp Image 2023-11-23 at 10 46 37 AM](https://github.com/Jeeya201/PICT-Team18-ConCurrency/assets/104685075/40b6eaed-d30a-4412-a2a7-64789899cd46)
+![WhatsApp Image 2023-11-23 at 10 46 45 AM](https://github.com/Jeeya201/PICT-Team18-ConCurrency/assets/104685075/4305b868-d19a-4f11-bedd-5c8d982ac68f)
+![WhatsApp Image 2023-11-23 at 10 46 53 AM](https://github.com/Jeeya201/PICT-Team18-ConCurrency/assets/104685075/64368244-f05c-4f33-bfb6-e6f8bd12f3b1)
 
-Include screenshots showcasing different sections of the ConCurrency application, including the UI screen, converter, and charts.
 
-![Screenshot 1](url-to-screenshot-1)
-![Screenshot 2](url-to-screenshot-2)
-...
 
 ## Acknowledgments
 
