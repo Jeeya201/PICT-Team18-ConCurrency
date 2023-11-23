@@ -53,7 +53,7 @@ function clearVal() {
 function displayResults(currency) {
   let fromRate = currency.rates[resultFrom];
   let toRate = currency.rates[resultTo];
-  finalValue.innerHTML = ((toRate / fromRate) * searchValue).toFixed(2);
+  finalValue.innerHTML = ((toRate / fromRate) * searchValue).toFixed(2); //2 Decimal Places
   finalAmount.style.display = "block";
 }
 

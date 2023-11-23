@@ -2,56 +2,56 @@ async function setup() {
 
   const ctx = document.getElementById('myChart').getContext('2d');
     
-    let s_Y = document.getElementById("s_Year").value;
-    if(s_Y==undefined)
+    let sYear = document.getElementById("s_Year").value;
+    if(sYear==undefined)
     {
-        s_Y="2012";
+        sYear="2012";
     }
-    let e_Y = document.getElementById("e_Year").value;
-    if(e_Y==undefined)
+    let eYear = document.getElementById("e_Year").value;
+    if(eYear==undefined)
     {
-        e_Y="2018";
+        eYear="2012";
     }
-    let s_M = document.getElementById("s_Month").value;
-    if(s_M==undefined)
+    let sMonth = document.getElementById("s_Month").value;
+    if(sMonth==undefined)
     {
-        s_M="04";
+        sMonth="01";
     }
-    let e_M = document.getElementById("e_Month").value;
-    if(e_M==undefined)
+    let eMonth = document.getElementById("e_Month").value;
+    if(eMonth==undefined)
     {
-        e_M="08";
+        eMonth="01";
     }
-    let s_D = document.getElementById("s_Day").value;
-    if(s_D==undefined)
+    let sDay = document.getElementById("s_Day").value;
+    if(sDay==undefined)
     {
-        s_D="03";
+        sDay="01";
     }
-    let e_D = document.getElementById("e_Day").value;
-    if(e_D==undefined)
+    let eDay = document.getElementById("e_Day").value;
+    if(eDay==undefined)
     {
-        e_D="13";
+        eDay="01";
     }
     let c2 = document.getElementById("curlist").value;
     if(c2=="")
     {
         c2="INR";
     }
-    let opt= document.getElementById("period").value;
-    if(opt==undefined)
+    let option= document.getElementById("period").value;
+    if(option==undefined)
     {
-        opt="M";
+        option="M";
     }
 
  
     
-    let s_date = s_Y + "-" + s_M + "-" + s_D;
-    let e_date = e_Y + "-" + e_M + "-" + e_D;
-    console.log(opt);
+    let sDate = sYear + "-" + sMonth + "-" + sDay;
+    let eDate = eYear + "-" + eMonth + "-" + eDay;
+    console.log(option);
     console.log(c2);
-    console.log(s_date);
-    console.log(e_date);
-    const globalTemps = await getData(c2,s_date,e_date,opt);
+    console.log(sDate);
+    console.log(eDate);
+    const globalTemps = await getData(c2,sDate,eDate,option);
     
   
       let chartStatus = Chart.getChart("myChart"); // <canvas> id
@@ -84,15 +84,13 @@ async function setup() {
  
   async function getData(value2,value3,value4,value5){
     const currency=["USD","DZD","AUD","BWP","BRL","BND","CAD","CLP","CNY","CZK","DKK","EUR","INR","ILS","JPY","KRW","KWD","MYR","MUR","MXN","NZD","NOK","OMR","PEN","PHP","PLN","QAR","RUB","SAR","SGD","ZAR","SEK","CHF","THB","TTD","AED","GBP","UYU","COP","BHD","VEF","HUF","ISK","IDR","IRR","KZT","LYD","NPR","PKR","LKR","TND"]
-    // let c1 = value1
     let c2=value2
     let d1=value3
     let d2=value4
-    let opt=value5
+    let option=value5
     let start = d1.toString();
     let end = d2.toString();
-    // d1 = new Date(d1);
-    // d2 = new Date(d2);
+    
 
     console.log(start);
     console.log(end);
@@ -108,16 +106,13 @@ async function setup() {
     let e_yy = parseInt(end.slice(0,4));
 
     let i= currency.indexOf(c2)+2;
-    // let j= currency.indexOf(c2)+1;
-    // let text2 =x.concat(z,".csv")
-    // let text3="db/".concat(text2);
+
     let path1="combined_final.csv";
-    // path1=path1.concat(q,".csv");
-    //console.log(path1);
+
     const response = await fetch(path1);
     console.log("response: ", response);
     const data = await response.text();
-    //console.log("data2",data);
+
         const t_date = [];
         const temps = [];
         const rows = data.split('\n').slice(1);
@@ -132,13 +127,10 @@ async function setup() {
         });
 
         //YEARLY ****************************************************************************************************
-        if(opt=='Y'){
-          diff = (e_yy-s_yy)+1;
-          // let curr = new Array(diff); for (let a=s_yy; a<diff; a++) curr[a] = 0;
-          // let years = new Array(diff); for (let b=s_yy; b<diff; b++) years[b] = 0;
+        if(option=='Y'){
+         
           const curr = [];
           const years =[];
-          // years.push(0);
           for(let a=s_yy;a<=e_yy;a++){
             curr[a]=0;
           }
@@ -161,7 +153,6 @@ async function setup() {
           console.log("curr",curr);
 
           const new_curr=[];
-          // new_curr.push(0);
           for(let k=s_yy;k<=e_yy;k++)
           {
             new_curr.push(curr[k]);
@@ -180,10 +171,9 @@ async function setup() {
         
         //MONTHLY ****************************************************************************************************
 
-        if(opt=='M'){
+        if(option=='M'){
           diff = (e_yy-s_yy)+1;
-          // let curr = new Array(diff); for (let a=s_yy; a<diff; a++) curr[a] = 0;
-          // let years = new Array(diff); for (let b=s_yy; b<diff; b++) years[b] = 0;
+          
           const curr = [];
           const months =[];
           for(let a=s_mm;a<=e_mm;a++){
@@ -224,7 +214,7 @@ async function setup() {
 
          //DAILY ****************************************************************************************************
 
-        if(opt=='D'){
+        if(option=='D'){
           diff = (e_yy-s_yy)+1;
           const curr = [];
           const months =[];
@@ -267,7 +257,7 @@ async function setup() {
 
          //WEEKLY ****************************************************************************************************
 
-         if(opt=='W'){
+         if(option=='W'){
           diff = (e_yy-s_yy)+1;
           const curr = [];
           const months =[];
@@ -310,10 +300,9 @@ async function setup() {
 
          //QUARTERLY ****************************************************************************************************
 
-         if(opt=='Q'){
+         if(option=='Q'){
           diff = (e_yy-s_yy)+1;
-          // let curr = new Array(diff); for (let a=s_yy; a<diff; a++) curr[a] = 0;
-          // let years = new Array(diff); for (let b=s_yy; b<diff; b++) years[b] = 0;
+          
           const curr = [];
           const months =[];
           for(let a=s_mm;a<=e_mm;a++){

@@ -131,18 +131,18 @@ header .navbar a:hover {
     flex-direction: column;
      
 }
-.yearlist #s_date{
+.yearlist #sDate{
     display:flex;
 }
-.yearlist #s_date label{
+.yearlist #sDate label{
     width: 50%;
     margin-right: 15px;
 }
 
-.yearlist #e_date{
+.yearlist #eDate{
     display:flex;
 }
-.yearlist #e_date label{
+.yearlist #eDate label{
     width: 50%;
     margin-right: 15px;
 }
