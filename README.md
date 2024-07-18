@@ -56,3 +56,4 @@ Visualize currency exchange rate trends over time using Chart.js. The interactiv
 ## Acknowledgments
 
 We would like to express our gratitude to the Northern Trust Hackathon organizers for providing this platform. ConCurrency was made possible through the collective efforts of Team 18.
+# Team-18-Northern-Trust-Hackathon-
